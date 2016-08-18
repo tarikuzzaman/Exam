@@ -24,7 +24,7 @@ public class XmlReader {
 		
 	DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 	DocumentBuilder builder = factory.newDocumentBuilder();
-	File file = new File(path);
+	File file = new File("qtp.xml");
 	Document doc = builder.parse(file);
 	NodeList nodeList = doc.getDocumentElement().getChildNodes();
 	List<Student> list = new ArrayList<>();

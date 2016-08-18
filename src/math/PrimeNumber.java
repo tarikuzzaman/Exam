@@ -1,6 +1,14 @@
 package math;
 
 public class PrimeNumber {
+	public static boolean isPrime(int num){
+		for(int j=2; j<num; j++){
+			if(num % j == 0){
+				return false;
+			}
+		}
+		return true;
+	}
 
 	public static void main(String[] args) {
 		/*
@@ -12,6 +20,16 @@ public class PrimeNumber {
 		 * Use any databases[MongoDB, Oracle, MySql] to store data and retrieve data.
 		 *
 		 */
+
+		int limit = 1000000, counter =0;
+		for(int i=2; i<limit; i++){
+			if(isPrime(i)){
+				System.out.println(i);
+				counter++;
+			}
+		}
+		System.out.println("Number of prime numbers: " + counter);
+
 
 	}
 

@@ -14,7 +14,19 @@ public class CnnEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
+
+
+		EmployeeInfo generic = new EmployeeInfo();
+		EmployeeInfo employeeOne = new EmployeeInfo("Zaman", 1);
+		EmployeeInfo employeeTwo = new EmployeeInfo(2);
+		employeeOne.assignDepartment("Software Tester");
+		System.out.println("The assigned department for "+ employeeOne.employeeName()+" is "+employeeOne.getDepartment());
+
+		System.out.println("The yearly calculated bonus for employee is "+EmployeeInfo.calculateEmployeBonus(10000, 'A'));
+		System.out.println("The yearly calculated pension for employee is "+EmployeeInfo.calculateEmployePension(20000, 4));
+
+		System.out.println("Weekly salary for "+employeeOne.employeeName()+" is "+employeeOne.calculateSalary(50, 40));
+
 
 
 	}
